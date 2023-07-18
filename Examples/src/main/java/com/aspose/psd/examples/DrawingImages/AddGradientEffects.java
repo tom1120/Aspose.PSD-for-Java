@@ -17,7 +17,7 @@ import com.aspose.psd.fileformats.psd.layers.layereffects.GradientOverlayEffect;
 import com.aspose.psd.imageloadoptions.PsdLoadOptions;
 
 /**
- *
+ * 渐变层效果
  */
 public class AddGradientEffects
 {
@@ -115,7 +115,6 @@ public class AddGradientEffects
 
         // Test file after edit
         PsdImage img = (PsdImage)Image.load(sourceFileName, loadOptions);
-
         GradientOverlayEffect gradientOverlayEffect = (GradientOverlayEffect)img.getLayers()[1].getBlendingOptions().getEffects()[0];
         Assert.areEqual(BlendMode.Lighten, gradientOverlayEffect.getBlendMode());
         Assert.areEqual(193, gradientOverlayEffect.getOpacity());
